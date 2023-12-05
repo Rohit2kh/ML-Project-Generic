@@ -1,5 +1,5 @@
 import sys
-from src.logger import logging
+from logger import logging
 
 #getting the details , line number , and filename in which exception is occured
 def display_error_message(error, error_details:sys):
@@ -23,11 +23,11 @@ class Custom_exception(Exception):
     
 
 
-# if __name__=="__main__":
+if __name__=="__main__":
 
-#     try:
-#         a=1/0
-#     except Exception as e:
-#         logging.info("Divide by zero error")
-#         raise Custom_exception(e,sys)
+    try:
+        a=1/0
+    except Exception as e:
+        logging.info("Divide by zero error")
+        raise Custom_exception(e,sys)
     
