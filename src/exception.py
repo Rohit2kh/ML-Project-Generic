@@ -1,5 +1,5 @@
 import sys
-from logger import logging
+from src.logger import logging
 
 #getting the details , line number , and filename in which exception is occured
 def display_error_message(error, error_details:sys):
@@ -13,7 +13,7 @@ def display_error_message(error, error_details:sys):
 
 #custom exception class
 
-class Custom_exception(Exception):
+class CustomException(Exception):
     def __init__(self, error_msg, error_details:sys):
         super().__init__(error_msg)#override the init method of exception class in custom exception class
         self.error_msg = display_error_message(error=error_msg, error_details=error_details)
